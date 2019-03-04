@@ -1,5 +1,8 @@
 package rocks.zipcode.assessment2.fundamentals;
 
+import rocks.zipcode.assessment2.generics.Shelter;
+import rocks.zipcode.assessment2.generics.ageable.Dog;
+
 /**
  * @author leon on 28/11/2018.
  */
@@ -68,6 +71,9 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
+        Shelter<Dog> dogShelter = new Shelter<>();
+        dogShelter.add(new Dog());
         return string.matches("^[-/@#$%^&_+=()*!]+");
+
     }
 }
