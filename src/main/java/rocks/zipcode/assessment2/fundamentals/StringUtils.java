@@ -52,7 +52,7 @@ public class StringUtils {
      * @return - true if string only contains alpha characters
      */
     public static Boolean isAlphaString(String string) {
-        return (string.matches("[a-zA-Z]"));
+        return (string.matches("^[ A-Za-z]+$"));
     }
 
     /**
@@ -68,6 +68,7 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return !isAlphaString(string) && !isNumericString(string);
+        String splChrs = "-/@#$%^&_+=()*!";
+        return string.matches("^[" + splChrs + "]+");
     }
 }
