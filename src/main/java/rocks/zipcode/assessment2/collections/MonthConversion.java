@@ -9,13 +9,13 @@ import java.util.TreeMap;
 public class MonthConversion {
     private Map<Integer, String> monthMap;
 
-    public MonthConversion(){
+    public MonthConversion() {
         monthMap = new TreeMap<>();
     }
 
     /**
      * @param monthNumber - ordinal of month in the year; i.e. January = 1, February = 2
-     * @param monthName - name of month
+     * @param monthName   - name of month
      */
     public void add(Integer monthNumber, String monthName) {
         this.monthMap.put(monthNumber, monthName);
@@ -35,7 +35,7 @@ public class MonthConversion {
      */
     public Integer getNumber(String monthName) {
         Integer monthNumber = null;
-        if(isValidMonth(monthName)) {
+        if (isValidMonth(monthName)) {
             for (Integer key : monthMap.keySet()) {
                 if (this.monthMap.get(key).equals(monthName)) {
                     monthNumber = key;
@@ -71,7 +71,7 @@ public class MonthConversion {
 
     /**
      * @param monthNumber - number of month in year
-     * @param monthName - name of month
+     * @param monthName   - name of month
      */
     public void update(Integer monthNumber, String monthName) {
         this.monthMap.replace(monthNumber, monthName);

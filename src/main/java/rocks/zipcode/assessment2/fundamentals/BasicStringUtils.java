@@ -7,7 +7,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return (string1+string2);
+        return (string1 + string2);
     }
 
     /**
@@ -28,23 +28,23 @@ public class BasicStringUtils {
     }
 
     /**
-     * @param string - the string to be manipulated
+     * @param string             - the string to be manipulated
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
-        for (char c: string.toCharArray()) {
-            if(charactersToRemove.indexOf(c) == -1){
-                result += c;
+        for (char c : string.toCharArray()) {
+            if (charactersToRemove.indexOf(c) == -1) {
+                result.append(c);
             }
         }
-        return result;
+        return result.toString();
     }
 
     /**
-     * @param string - the string to be manipulated
+     * @param string             - the string to be manipulated
      * @param charactersToRemove - characters to be removed from the string
      * @return reverse of `string` with `charactersToRemove` removed
      */

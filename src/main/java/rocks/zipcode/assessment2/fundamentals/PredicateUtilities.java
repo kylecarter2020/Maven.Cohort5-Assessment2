@@ -26,8 +26,7 @@ public class PredicateUtilities {
     }
 
     /**
-     *
-     * @param value - the value to be evaluated
+     * @param value    - the value to be evaluated
      * @param multiple - the multiple to test `value` against
      * @return true if `value` is a multiple of `multiple`
      */
